@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "description": "",
     "main": "server/index.js",
+    "scripts": {
+        "start": "nodemon server --exec babel-node",
+        "drop": "nodemon server/helpers/supportResources/drop.js --exec babel-node",
+        "test": "jest"
+    },
     "dependencies": {
         "@babel/core": "^7.0.0",
         "@babel/preset-env": "^7.0.0",
