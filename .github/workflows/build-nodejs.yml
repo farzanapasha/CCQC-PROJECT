@@ -1,0 +1,40 @@
+name: Build Node.js Application
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18' # Specify your Node.js version
+
+    # Step 3: Navigate to the API directory and install dependencies
+    - name: Install Dependencies
+      working-directory: ./API
+      run: npm install
+
+    # Step 4: Run tests
+    - name: Run Tests
+      working-directory: ./API
+      run: npm test
+
+    # Step 5: Build the application
+    - name: Build Application
+      working-directory: ./API
+      run: npm run build
+
