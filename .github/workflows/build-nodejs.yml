@@ -33,8 +33,4 @@ jobs:
       working-directory: ./API
       run: npm test -- --forceExit
 
-    # Step 5: Build the application
-    - name: Build Application
-      working-directory: ./API
-      run: npm run build
 
