@@ -8,6 +8,11 @@ Phase 1
 
 `npm install`
 
+### Test Application
+
+`npm test`
+
 ### START Application
 
 `npm start`
+
