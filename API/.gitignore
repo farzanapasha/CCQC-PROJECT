@@ -1,2 +1,5 @@
 .env
+<<<<<<< HEAD
 API/server/helpers/fcmtoken/google-services.json
+=======
+>>>>>>> 2bb40a243cc4b2b1494f592914b97c7bf5807785
