@@ -33,4 +33,11 @@ jobs:
       working-directory: ./API
       run: npm test -- --forceExit
 
+    # Step 4: Run test coverage
+    - name: Run Tests
+      working-directory: ./API
+      run: npx jest server/services/login/__tests__/loginServices.test.js --coverage --collectCoverageFrom="server/services/login/*.js" -- --forceExit
+
+
+
 
