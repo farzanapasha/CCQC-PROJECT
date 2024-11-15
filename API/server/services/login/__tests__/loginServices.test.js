@@ -82,7 +82,7 @@ describe('loginServices', () => {
             select: jest.fn().mockResolvedValue(dbResponse),
         });
 
-        await expect(loginServices.login(mockUser)).rejects.toThrow('invalidPasswordException'); // Assuming you throw this error
+        await expect(loginServices.login(mockUser)).rejects.toThrow('User invalidPasswordException'); // Assuming you throw this error
     });
 
     it('should throw an error for non-existent user', async () => {
@@ -98,6 +98,6 @@ describe('loginServices', () => {
             select: jest.fn().mockResolvedValue([]), // No user found
         });
 
-        await expect(loginServices.login(mockUser)).rejects.toThrow('invalidUserException'); // Assuming you throw this error
+        await expect(loginServices.login(mockUser)).rejects.toThrow('User invalidUserException'); // Assuming you throw this error
     });
 });
