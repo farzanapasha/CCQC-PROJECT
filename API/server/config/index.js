@@ -1,0 +1,33 @@
+import "./lib";
+
+const {
+  APP_PORT,
+  TOKEN_EXPIRATION,
+  TOKEN_SECRET,
+  TOKEN_EXPIRATION_TYPE,
+  HTTPSKEY,
+  HTTPSCERT,
+  HTTPSCA,
+  HTTPS,
+  DB_HOST,
+  DB_USER,
+  DB_PASS,
+  DB_NAME,
+  DB_PORT,
+} = process.env;
+
+export default {
+  APP_PORT: APP_PORT || 7070,
+  TOKEN_EXPIRATION: TOKEN_EXPIRATION || 1,
+  TOKEN_SECRET: TOKEN_SECRET || "Test",
+  TOKEN_EXPIRATION_TYPE: TOKEN_EXPIRATION_TYPE || "hours",
+  HTTPS: HTTPS || false,
+  HTTPSKEY: HTTPSKEY,
+  HTTPSCERT: HTTPSCERT,
+  HTTPSCA,
+  DB_HOST: "localhost",
+  DB_USER: "root",
+  DB_PASS: "password",
+  DB_NAME: "apidb",
+  DB_PORT: 3306,
+};

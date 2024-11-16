@@ -1,0 +1,4 @@
+.env
+google-services.json
+*.bak
+coverage/
