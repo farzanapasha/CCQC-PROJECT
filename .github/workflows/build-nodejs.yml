@@ -11,6 +11,7 @@ on:
 jobs:
   variables:
     DOCKER_IMAGE: ccq-app
+
   build:
     runs-on: ubuntu-latest
 
