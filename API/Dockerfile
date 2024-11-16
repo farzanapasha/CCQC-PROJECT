@@ -11,7 +11,7 @@ COPY API/package*.json ./
 RUN npm install
 
 # Copy the rest of the application files
-COPY ./API/ .
+COPY . .
 
 # Expose the port the app runs on
 EXPOSE 7070
