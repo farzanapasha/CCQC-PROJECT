@@ -1,8 +1,11 @@
 import LoginController from './login'
 import UserControler from './user'
+import LeadController from './lead'
 import ClientController from './client'
 import RoleController from './role'
+import dashboardController from './dashboard'
 import TokenController from './fcmtoken'
+
 
 
 export default (express,JWTMiddleware) => {
@@ -26,16 +29,26 @@ export default (express,JWTMiddleware) => {
     
     router.get('/api/getallrole',RoleController.getAllRole.getAll)
 
+    //router.post('/api/createlead',LeadController.createLead.create)
+    router.get('/api/getalllead',LeadController.getAllLead.getAll)
+    router.get('/api/getlead',LeadController.getLead.getLead)
+    router.put('/api/updatelead',LeadController.updateLead.update)
+    router.delete('/api/deletelead',LeadController.deleteLead.delete)
+
     router.post('/api/createclient',ClientController.createClient.create)
     router.post('/api/convertleadtoclient',ClientController.convertLeadToClient.convert)
     router.get('/api/getallclient',ClientController.getAllClient.getAll)
     router.get('/api/getclient',ClientController.getClient.getClient)
     router.put('/api/updateclient',ClientController.updateClient.update)
     router.delete('/api/deleteclient',ClientController.deleteClient.delete)
-    
+
     router.get('/api/getalltoken',TokenController.getAllFcmToken.getAll)
     router.get('/api/sendnotification',TokenController.sendNotification.sendNotification)
     router.post('/api/createtoken',TokenController.createFcmToken.create)
+
+    router.get('/api/getleadworkordercount',dashboardController.getLeadWorkorderCount.getLeadWorkorderCount)
+    router.get('/api/getworkorderbyteam',dashboardController.getWorkorderByTeam.getWorkorderByTeam)
+    router.get('/api/getInvoiceAndWorkorder',dashboardController.getInvoiceAndWorkorder.getInvoiceAndWorkorder)
 
     // router.post('/api/logout', LoginController.logout);
     return router;
