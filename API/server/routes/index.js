@@ -3,6 +3,7 @@ import UserControler from './user'
 import LeadController from './lead'
 import ClientController from './client'
 import RoleController from './role'
+import EquipmentsController from './equipments'
 import dashboardController from './dashboard'
 import TokenController from './fcmtoken'
 
@@ -45,6 +46,9 @@ export default (express,JWTMiddleware) => {
     router.get('/api/getalltoken',TokenController.getAllFcmToken.getAll)
     router.get('/api/sendnotification',TokenController.sendNotification.sendNotification)
     router.post('/api/createtoken',TokenController.createFcmToken.create)
+
+    router.get('/api/getequipments',EquipmentsController.getAllEquipments.getAll)
+    router.post('/api/createequipments',EquipmentsController.createEquipments.create)
 
     router.get('/api/getleadworkordercount',dashboardController.getLeadWorkorderCount.getLeadWorkorderCount)
     router.get('/api/getworkorderbyteam',dashboardController.getWorkorderByTeam.getWorkorderByTeam)
