@@ -4,8 +4,8 @@ describe('User Login Workflow', () => {
     cy.visit('http://localhost:8080/login');
 
     // Enter credentials
-    cy.get('input[name="email"]').type('testuser@example.com');
-    cy.get('input[name="password"]').type('password123');
+    cy.get('input[name="email"]').type('test@test.com');
+    cy.get('input[name="password"]').type('1234');
     cy.get('button[type="submit"]').click();
 
     // Verify successful login
