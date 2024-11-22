@@ -1,0 +1,6 @@
+PS D:\Projects\Eletec\Eletec-WEB> npm install
+npm WARN deprecated axios@0.19.2: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410       
+npm WARN deprecated @fortawesome/fontawesome-free-solid@5.0.13: This package is deprecated. See https://git.io/fNCzJ for information about upgrading.        
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated popper.js@1.16.1: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1

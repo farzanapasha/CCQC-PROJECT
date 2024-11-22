@@ -1,0 +1,140 @@
+@import "~styles/variables";
+
+.transition-enter {
+  transform: scale(0);
+}
+
+.transition-enter-active {
+  transform: scale(1);
+  transition: transform 1000ms ease;
+}
+
+.transition-exit {
+  transform: scale(1);
+}
+
+.transition-exit-active {
+  transform: scale(0);
+  transition: transform 1000ms ease;
+}
+
+header {
+  background: $blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    background: $white;
+    .company-name{
+      background: #eaeaea;
+      padding: 5px;
+      img{
+        width: 240px;
+      }
+    }
+    i {
+      color: $white;
+      font-size: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 23px;
+      left: 267px;
+    }
+    
+    label {
+      font-size: x-large;
+      color: $blue;
+      margin-bottom: 0;
+      margin-left: $size + 10;
+    }
+  }
+  .profile {
+    display: inherit;
+    align-items: center;
+    padding: $size + 6 $size + 5 $size + 5 $size + 8;
+    &:hover {
+      background: lighten($blue, 5%);
+      cursor: pointer;
+    }
+    .profile-img {
+      margin-right: 10px;
+      display: inline-block;
+      width: $size + 30;
+      height: $size + 30;
+      overflow: hidden;
+      border-radius: $size - 5;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .profile-name {
+      margin-right: 15px;
+      span {
+        font-size: $size + 5;
+        color: lighten($blue, 50%) !important;
+        text-transform: capitalize;
+      }
+    }
+    .dropdown {
+      .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        padding: 7px 0 5px 0 !important;
+        i {
+          color: lighten($blue, 50%) !important;
+          font-size: $size + 5;
+          padding-top: 3px;
+        }
+      }
+      .dropdown-content {
+        margin-top: 5px;
+        display: block;
+        position: absolute;
+        background: white;
+        min-width: 160px;
+        box-shadow: 0 0 9px #444;
+        z-index: 1;
+        left: -138px;
+        border-radius: $size;
+        top: 50px;
+        a,
+        span {
+          float: none;
+          color: #444;
+          cursor: pointer;
+          padding: 5px 10px;
+          text-decoration: none;
+          font-size: small;
+          display: block;
+          text-align: left;
+        }
+        a {
+          &:hover {
+            color: $white;
+            background: $blue;
+          }
+          &:first-child {
+            border-radius: $size $size 0 0;
+          }
+          &:last-child {
+            border-radius: 0 0 $size $size;
+          }
+        }
+      }
+    }
+  }
+}
