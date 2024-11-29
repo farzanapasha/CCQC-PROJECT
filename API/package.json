@@ -59,6 +59,7 @@
         "nodemon": "^1.11.0"
     },
     "jest": {
+        "testPathIgnorePatterns": ["<rootDir>/cypress/", "<rootDir>/tests/e2e/"],
         "collectCoverage": true,
         "collectCoverageFrom": [
             "server/**/*.{js,jsx}",
