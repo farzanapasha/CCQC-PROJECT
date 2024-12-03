@@ -4,19 +4,6 @@ Under the guidance of Professor Kumal Halder
 Application: Booking Managment System
 Phase 1
 
-### INSTALL
-
-`npm install`
-
-### Test Application
-
-`npm test`
-
-### START Application
-
-`npm start`
-
-
 # Todo Application
 
 A modern todo application built with React frontend and Node.js backend, featuring a clean Material-UI interface and REST API integration.
@@ -25,6 +12,7 @@ A modern todo application built with React frontend and Node.js backend, featuri
 
 - Node.js (v18 or higher)
 - npm (v6 or higher)
+- npx (v10 or higher)
 - Docker (for containerization)
 - MySQL (8.x or higher)
 
@@ -33,6 +21,7 @@ A modern todo application built with React frontend and Node.js backend, featuri
 ```
 project/
 ├── API/               # Node.js API backend
+├── WEB/               # React frontend 
 └── .github/           # GitHub Actions workflows
 ```
 
@@ -67,26 +56,25 @@ project/
    TOKEN_EXPIRATION_TYPE=
    ```
 
-4. Start the backend (API) server:
-   ```bash
+4. Test API Unit Test
+
+   ```
+   npm test
+   ```
+
+5. E2E Test
+   ```
+   npx cypress run
+   npx cypress open
+   ```
+
+6. START Application
+
+   ```
    npm start
    ```
 
 The backend will be available at `http://localhost:7070`.
-
-## Testing
-
-### Backend Testing
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Run the tests:
-   ```bash
-   npm test
-   ```
 
 ## Features
 
