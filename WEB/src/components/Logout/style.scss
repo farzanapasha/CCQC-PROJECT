@@ -1,0 +1,69 @@
+@import "~styles/variables";
+
+.logout-main {
+    background-color: white;
+    padding: 26vh 0 0;
+    height: 100vh;
+}
+
+.logout {
+    font-size: 35;
+    background-color: white;
+    height: 100%;
+    padding: 0 5%;
+}
+
+.logout h1 {
+    display: block;
+    color: black;
+}
+
+.logout .col-md-6 {
+    margin: 0 auto;
+    background: white;
+    padding: 46px 25px;
+    min-height: 255px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+
+.logout .col-md-6 h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.logout .col-md-6 p {
+    padding: 0 25px 25px;
+    font-size: 16px;
+}
+
+.logout .col-md-6 .btn-primary {
+    background-color: #1d9bd1 !important;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    padding: 10px 25px 10px 15px;
+}
+
+.logout .col-md-6 .btn-blue {
+    background-color: #177ca7 !important;
+    padding: 10px 14px;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+@media (min-width:320px) and (max-width:520px) {
+    .logout .col-md-6 {
+        min-height: 240px;
+    }
+
+    .logout .col-md-6 label {
+        font-size: 16px !important;
+    }
+
+    .logout .col-md-6 h1 {
+        padding-top: 25px;
+    }
+}

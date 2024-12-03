@@ -1,0 +1,132 @@
+@import "../../styles/variables.scss";
+
+#wrapper.collapse {
+  padding-left: 0;
+
+  #sidebar-wrapper {
+    width: 0;
+  }
+}
+
+#wrapper.collapse:not(.show) {
+  display: block;
+}
+
+#wrapper.collapsing {
+  height: 90vh !important;
+  overflow: hidden;
+}
+
+#wrapper,
+#wrapper.collapse.show {
+  padding-left: 235px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  #sidebar-wrapper {
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    top: 71px;
+    box-shadow: 0 0 9px #888;
+    height: 100%;
+    margin-left: -250px;
+    // overflow-y: scroll;
+    overflow-x: hidden;
+    background: $gray;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    .sidebar-nav {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      > h6 {
+        padding: $size + 6 0 $size + 6 $size + 20;
+        font-size: $size + 13;
+        font-weight: 100;
+      }
+
+      li {
+        text-indent: 10px;
+        line-height: 55px;
+        a {
+          i {
+            color: #555;
+            font-size: 16px;
+            margin-right: 5px;
+            text-shadow: none;
+            display: inline-block;
+            margin-right: 4px;
+            display: none;
+          }
+        }
+        div {
+          margin-left: -37px !important;
+          i {
+            &:first-child {
+              display: none;
+            }
+          }
+          span {
+            margin-right: 90px;
+          }
+        }
+        a,
+        div {
+          text-decoration: none;
+          color: #555;
+          display: flex;
+          margin-left: 0px;
+          padding-left: 10px;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: rgba(221, 221, 221, 0.27);
+          // border-bottom: 1px solid #DDDDDD;
+          // border-top: 1px solid #FFFFFF;
+        }
+
+        a:hover,
+        div:hover {
+          text-decoration: none;
+          color: #fff;
+          i {
+            color: #fff;
+          }
+          // padding-right: 10vw;
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+.second-level {
+  padding-left: 20px;
+  li {
+    display: flex;
+    color: white;
+    align-items: center;
+    a {
+      margin-left: -91px !important;
+      width: 320px;
+    }
+    a:hover {
+      background: $blue;
+    }
+  }
+}
+
+.level1-active {
+  color: white !important;
+  background: $blue;
+}

@@ -1,0 +1,147 @@
+@import "~styles/variables";
+@import "~styles/main";
+
+.lead-page-wrapper {
+  .tool-component-wrapper {
+    display: flex;
+    ul {
+      margin: $size 0 $size + 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 76%;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 20%;
+
+        .top-icon {
+          position: relative;
+          img {
+            width: 70px;
+          }
+          span {
+            position: absolute;
+            z-index: 1;
+            top: 15px;
+            left: 29px;
+            color: #fff;
+            font-size: 20px;
+          }
+        }
+
+        h6 {
+          font-size: 15px;
+          color: #717171;
+        }
+      }
+    }
+  }
+  .lead-page-content {
+    overflow-x: auto;
+    .r-table.table-wrapper {
+      margin-top: 0;
+      width: 100%;
+      overflow-x: auto;
+      border: none;
+    }
+  }
+
+  .modal-modal {
+    min-width: 800px;
+  }
+}
+
+.add-lead-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .validation {
+    font-size: $size + 1;
+    color: red;
+    display: block;
+    margin-bottom: 10px;
+  }
+  h5 {
+    padding-bottom: $size + 5;
+    padding-top: 25px;
+  }
+  .add-lead-form {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    .add-lead-block {
+      font-size: small;
+      height: $size + 42;
+      margin-bottom: $size + 5;
+      border-left: 2px solid #00ff85;
+      background: white;
+      box-shadow: 0 0 5px #bbb;
+      border-radius: 5px;
+      padding: $size - 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 96%;
+
+      > button {
+        @extend .button-style;
+      }
+
+      label {
+        font-size: 13px;
+        color: #222;
+      }
+      input {
+        padding-left: $size;
+        width: 86%;
+      }
+      .select-box {
+        width: 85%;
+      }
+    }
+  }
+}
+.cancel-save {
+  display: flex;
+  justify-content: flex-end !important;
+  button:first-child {
+    margin-right: 10px;
+  }
+}
+
+// .collapse{
+//   .tool-component{
+//     right: 35px !important;
+//   }
+// }
+
+// .collapse.show{
+//   .tool-component{
+//     right: 0!important;
+//   }
+// }
+
+.top-loader {
+  min-height: 40vh;
+  margin-top: 40px;
+}
+
+.success-message {
+  span {
+    color: green;
+    font-size: 15px;
+  }
+}
+
+.error-message {
+  span {
+    color: #e02121;
+    font-size: 15px;
+  }
+}

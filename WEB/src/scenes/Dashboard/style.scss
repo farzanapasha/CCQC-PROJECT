@@ -1,0 +1,344 @@
+@import "~styles/variables";
+@import "~styles/main";
+
+.home-design-wrapper {
+  padding-right: 0;
+  padding-left: 0;
+  height: $size + 60;
+  background: $blue;
+  width: 100%;
+  margin: $size + 61 0 0;
+
+  .fa-bars {
+    color: $white;
+    position: fixed;
+    top: $size + 4;
+    z-index: 9999;
+    font-size: $size + 7;
+  }
+  .box {
+    padding: $size + 10;
+  }
+  .box-01 {
+    display: grid;
+    grid-template-columns: 97%;
+    margin: 0 20px 0 13px;
+    background: #006ed0;
+    height: 120px;
+    border-radius: 0 0 35px 0;
+    width: 69%;
+    @media #{$small} {
+      grid-template-columns: 1fr;
+    }
+    .heading-appointment {
+      @extend .display-items;
+      justify-content: space-between;
+      color: lighten($blue, 50%) !important;
+      padding-bottom: 15px;
+      h4 {
+        font-size: $size + 6;
+      }
+      p {
+        font-size: $size + 3;
+      }
+    }
+    .appointment-tab {
+      display: flex;
+      li {
+        padding: $size 0;
+        background: #2180d6;
+        font-size: $size + 4;
+        color: $white;
+        border-right: 1px solid $white;
+        @extend .display-items;
+        width: 25%;
+        &:hover,
+        &.active {
+          background: $white;
+          cursor: pointer;
+          color: $black;
+        }
+        &:first-child {
+          border-radius: $size + 15 0 0 $size + 15;
+        }
+        &:last-child {
+          border-radius: 0 $size + 15 $size + 15 0;
+          border-right: none;
+        }
+      }
+    }
+    .tab-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: $size + 10 0;
+      li {
+        font-size: $size + 9;
+        text-align: center;
+        color: lighten($black, 75%);
+        border-bottom: $border;
+        cursor: pointer;
+        &.active {
+          border-color: $blue;
+          color: $blue;
+        }
+      }
+    }
+    .meeting-list {
+      height: 70vh;
+    overflow-y: auto;
+    margin-top: 25px;
+      > li {
+        @extend .display-items;
+        justify-content: space-between;
+        padding: $size + 2 $size + 5;
+        box-shadow: 0 0 6px #999;
+        background: $white;
+        border-radius: $size - 5;
+        margin: $size + 5 $size $size + 5 0;
+        border-left: $size - 5 solid #00f792;
+
+        svg {
+          color: $blue;
+        }
+
+        > div {
+          h6 {
+            color: lighten($black, 30%);
+            font-weight: bold;
+            font-size: $size + 3;
+          }
+          p {
+            font-size: $size + 2;
+            color: orange;
+          }
+          button {
+            background: none;
+            font-weight: 700;
+            border: 1px solid #ddd;
+            box-shadow: none;
+            padding: 10px 7px 7px 7px;
+            font-size: 12px;
+            border-radius: 5px;
+            &:hover {
+              background: darken($blue, 20%);
+              color: $white;
+            }
+          }
+        }
+
+        ul {
+          &:nth-child(2) {
+            span {
+              padding-left: $size - 5;
+            }
+          }
+          li {
+            &:first-child {
+              font-weight: bold;
+              color: lighten($black, 30%);
+              font-size: small;
+            }
+            &:last-child {
+              color: lighten($black, 40%);
+              font-size: $size + 2;
+            }
+          }
+        }
+
+        p {
+          svg {
+            color: $blue;
+            font-size: $size + 8;
+            &:hover {
+              cursor: pointer;
+              color: lighten($blue, 25%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fixed-right {
+    position: fixed;
+    right: 0;
+    width: 25%;
+    box-shadow: 0 0 $size - 1 #aaa;
+    top: 71px;
+    height: 89vh;
+    background: $white;
+    overflow-y: auto;
+    border-radius: $size + 20 0 0 0;
+    .box-02 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      grid-column: 2 / 2;
+      grid-row: 1 / 1;
+      @media #{$small} {
+        grid-row: 2;
+        grid-column: 1 / 3;
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+      > div {
+        text-align: center;
+        padding: $size 0;
+        @media #{$small} {
+          &:not(:last-child) {
+            border-bottom: $border;
+          }
+        }
+        p {
+          border-radius: 50%;
+          font-size: 15px;
+          font-weight: bold;
+          border: 4px solid #ddd;
+          display: flex;
+          padding: 17px 30px;
+          overflow: hidden;
+          width: 46px;
+          color: #006ed0;
+          margin: 0 auto;
+          text-align: center;
+          justify-content: center;
+        }
+        h6 {
+          color: #555;
+          font-size: 14px;
+        }
+      }
+    }
+    .box-03 {
+      .calendar {
+        height: 260px;
+        @extend .display-items;
+      }
+      .tab-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: $size + 10 0;
+        li {
+          font-size: $size + 9;
+          text-align: center;
+          color: lighten($black, 60%);
+          border-bottom: $border;
+          cursor: pointer;
+          &.active {
+            border-color: $orange;
+            color: $orange;
+          }
+        }
+      }
+      ul.total-items {
+        padding: 0 $size + 2;
+        li {
+          @extend .display-items;
+          justify-content: space-between;
+          padding: $size - 7 0;
+          color: #717171;
+          font-size: $size + 4;
+          span {
+            color: $black;
+            font-weight: bold;
+            border: none;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.side-nav li > a {
+  text-transform: uppercase;
+}
+
+.myBtn i.material-icons {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 45px;
+  float: right;
+  padding: 30px;
+  position: static;
+}
+/*submenu dropdowns nav-mobile*/
+/* Dropdown Button */
+#slide-out .dropbtn {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  line-height: 0;
+  padding-top: 14px;
+}
+
+#slide-out button.dropbtn:focus {
+  outline: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#slide-out .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 1;
+  left: 55%;
+}
+
+#slide-out li .dropdown a {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 32px;
+}
+
+#slide-out li .dropdown a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Links inside the dropdown */
+#slide-out li .dropdown-content a {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0 16px;
+  text-decoration: none;
+  display: block;
+  text-transform: none;
+  font-size: 1rem;
+  height: 50px;
+  border: none;
+}
+
+/* Show the dropdown menu on hover */
+#slide-out .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#slide-out .dropdown .dropbtn {
+  max-height: 0;
+}
+
+.collapse {
+  .home-design-wrapper {
+    .box-01 {
+      margin-left: 0;
+      width: 75%;
+    }
+  }
+}
+
+.collapse.show {
+  .home-design-wrapper {
+    .box-01 {
+      margin-left: 13px;
+      width: 69%;
+    }
+  }
+}

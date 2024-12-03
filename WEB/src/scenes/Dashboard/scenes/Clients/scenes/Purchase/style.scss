@@ -1,0 +1,17 @@
+.table-container {
+  overflow-x: auto;
+  margin-top: 40px;
+  }
+  .purchaseimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+    vertical-align: middle;
+    border-style: none;
+    width: 50%;
+    height: 50%;
+    padding-top: 10px;
+    }
+  }

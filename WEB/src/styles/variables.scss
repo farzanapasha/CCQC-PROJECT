@@ -1,0 +1,39 @@
+@import "~css/animate.min.css";
+@import "~css/bootstrap.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import '~react-datepicker/dist/react-datepicker.css';
+@import "/src/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css";
+@import '~leaflet/dist/leaflet.css';
+@import "scrollbar";
+
+// $font: 'Open Sans', sans-serif;
+// $font: 'Poppins', sans-serif;
+$font: 'Arimo', sans-serif;
+$size: 10px;
+$black: #000;
+$border: 1px solid #ddd;
+$box-shadow: 0 0 1px #999;
+$white:white;
+$blue:#006ed0;
+$gray: #eaeaea;
+$orange:#fa4f00;
+
+$x-small: "(max-width: 575px)";
+$small: "(max-width: 767px)";
+$medium: "(max-width: 991px)";
+$large: "(max-width: 1199px)";
+$x-large: "(min-width: 1200px) and (max-width: 1499px)";
+$tv: "(min-width: 1500px)";
+
+
+.button-style{
+    border: none;
+    background: #006ed0;
+    border-radius: 5px;
+    border-left: 3px solid #00ff85;
+    color: white;
+    margin: 10px 18px 0 0;
+    padding: 4px 10px;
+}

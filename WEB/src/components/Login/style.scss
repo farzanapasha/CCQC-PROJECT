@@ -1,0 +1,105 @@
+@import "~styles/variables";
+@import "~styles/main";
+
+.login-page-wrapper {
+  height: 100vh;
+  display: flex;
+  @media #{$small} {
+    display: block;
+  }
+  .login-left {
+    background: $white;
+    width: 50vw;
+    margin: 0 auto;
+    @extend .display-items;
+    .heading-mobile {
+      display: none;
+    }
+    @media #{$small} {
+      width: 100vw;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: rgb(70, 130, 180);
+      background: linear-gradient(
+        0deg,
+        rgba(70, 130, 180, 1) 0%,
+        rgba(45, 129, 253, 1) 100%
+      );
+
+      .heading-mobile {
+        text-align: center;
+        display: block;
+        h5 {
+          text-transform: uppercase;
+        }
+        h2 {
+          font-size: 50px;
+        }
+      }
+    }
+    section {
+      width: 55%;
+      @media #{$small} {
+        width: 94%;
+        margin: 0 auto;
+        button {
+          background: darken($blue, 20%);
+          color: $white;
+          border: none;
+          box-shadow: none;
+          width: 50%;
+        }
+      }
+      > div {
+        margin-bottom: $size - 5;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        padding: $size + 5 0 $size;
+        svg {
+          color: $blue;
+        }
+        input {
+          width: 90%;
+          padding-left: $size - 3;
+          @media #{$small} {
+            &::placeholder {
+              color: $white;
+              opacity: 0.5;
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .login-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    background: #466078;
+    color: $white;
+    font-size: 75px;
+    flex-direction: column;
+    @media #{$small} {
+      display: none;
+    }
+    h5 {
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 50px;
+    }
+  }
+}
+
+.validation {
+  color: red;
+  display: block;
+  margin-bottom: 10px;
+}
